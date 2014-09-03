@@ -4,7 +4,14 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.4'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development do
+	gem 'sqlite3', '1.3.8', :require => 'sqlite3'
+end
+
+group :production do
+	gem 'pg'
+	gem 'rails_12factor', '0.0.2'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -14,6 +21,8 @@ gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
+
+gem 'nifty-generators'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -43,3 +52,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem "bcrypt-ruby", require: "bcrypt"
+
+gem "mocha", group: :test
