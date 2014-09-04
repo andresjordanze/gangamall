@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require easing
+//= require jquery.etalage.min
+//= require jquery.min
+//= require jquery.responsiveTabs
+//= require move-top
+//= require responsiveslides.min 
